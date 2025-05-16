@@ -1,0 +1,50 @@
+/* src/styles/components.css */
+@tailwind components;
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-pink-500 to-purple-500
+           text-white font-bold py-3 px-6 rounded-full shadow-lg;
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover { @apply shadow-xl scale-105; }
+  .btn-primary:active { @apply scale-95; }
+
+  /* Photo Frames */
+  .photo-frame {
+    @apply border-4 border-white shadow-lg relative;
+    background: linear-gradient(145deg, #ffffff 0%, #ffe4f0 50%, #ffffff 100%);
+  }
+  .photo-frame::before {
+    @apply absolute inset-0 border-2 border-pink-200 rounded pointer-events-none;
+    content: "";
+  }
+
+  /* Candle Flame Fix */
+  .candle-flame {
+    @apply mix-blend-lighten z-[500];
+    filter: 
+      drop-shadow(0 0 10px rgba(255,180,180,0.9))
+      brightness(1.8);
+    animation: flame-flicker 1.2s infinite alternate;
+  }
+
+  /* Birthday Message Fix */
+  .birthday-message {
+    @apply bg-pink-100/95 backdrop-blur-md z-[999] shadow-[0_0_30px_15px_rgba(255,180,255,0.5)];
+  }
+
+  /* Jewelry Box */
+  .jewelry-box-lid {
+    @apply origin-top;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Keyframes for flame flicker */
+  @keyframes flame-flicker {
+    0% { opacity: 0.9; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
+    100% { opacity: 0.8; transform: scaleY(0.95); }
+  }
+}

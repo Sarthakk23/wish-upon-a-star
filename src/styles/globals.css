@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply w-full h-full;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Comic Neue', cursive;
+    @apply bg-gradient-to-b from-pink-50 to-purple-50 text-purple-900 overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-pink-500 text-white;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-pink-50;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pink-400 rounded;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pink-500;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+  }
+
+  body.waiting * {
+    animation: none !important;
+  }
+
+  /* Ensure all sections are full width by default */
+  section {
+    @apply w-full;
+  }
+}

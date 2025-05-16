@@ -1,0 +1,36 @@
+:root {
+  /* Primary pink/purple theme */
+  --color-primary: 255, 107, 139; /* #ff6b8b */
+  --color-secondary: 236, 72, 153; /* #ec4899 */
+  --color-accent: 168, 85, 247; /* #a855f7 */
+  --color-light: 255, 228, 240; /* #ffe4f0 */
+  --color-dark: 74, 4, 78; /* #4a044e */
+
+  /* Pastel variants */
+  --color-pink-50: 255, 240, 246;
+  --color-pink-100: 255, 222, 235;
+  --color-purple-50: 245, 240, 255;
+  --color-purple-100: 237, 229, 253;
+  
+  /* Gradients */
+  --gradient-hero: linear-gradient(
+    135deg,
+    rgba(255, 222, 235, 1) 0%,
+    rgba(237, 229, 253, 1) 100%
+  );
+  
+  --gradient-button: linear-gradient(
+    to right,
+    #ff6b8b 0%,
+    #ec4899 50%,
+    #a855f7 100%
+  );
+}
+
+/* Dark mode variant (optional) */
+[data-theme="dark"] {
+  --color-primary: 236, 72, 153;
+  --color-secondary: 168, 85, 247;
+  --color-light: 74, 4, 78;
+  --color-dark: 255, 228, 240;
+}

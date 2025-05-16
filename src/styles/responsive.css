@@ -1,0 +1,47 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* Ultra-wide screens */
+  @media (min-width: 1920px) {
+    .container-xxl {
+      max-width: 1800px;
+    }
+  }
+
+  /* Tall mobile devices */
+  @media (max-height: 700px) and (orientation: portrait) {
+    .hero-section {
+      min-height: 120vh;
+    }
+  }
+
+  /* Foldable devices */
+  @media (max-width: 330px) {
+    .text-xxs {
+      font-size: 0.65rem;
+    }
+  }
+
+  /* Component-specific adjustments */
+  @media (max-width: 640px) {
+    .photo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .jewelry-box {
+      transform: scale(0.8);
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      background: white !important;
+      color: black !important;
+    }
+  }
+}
