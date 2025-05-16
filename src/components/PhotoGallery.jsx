@@ -6,37 +6,36 @@ const MotionImg = motion.img;
 const MotionButton = motion.button;
 
 const photos = [
-  { id: 1, src: '/assets/images/photos/photo5.jpg', caption: 'Beautiful Smile ✨', aspect: 'portrait' },
-  { id: 2, src: '/assets/images/photos/photo2.jpg', caption: 'Lovely Memories 💝', aspect: 'landscape' },
-  { id: 3, src: '/assets/images/photos/photo3.jpg', caption: 'Special Moments 🌸', aspect: 'portrait' },
-  { id: 4, src: '/assets/images/photos/photo7.jpg', caption: 'Adventure Buddies 🌄', aspect: 'square' },
-  { id: 5, src: '/assets/images/photos/photo1.jpg', caption: 'Golden Hours 🌅', aspect: 'landscape' },
-  { id: 6, src: '/assets/images/photos/photo6.jpg', caption: 'Best Friends Forever 👯', aspect: 'square' },
-  { id: 7, src: '/assets/images/photos/photo4.jpg', caption: 'Happy Times 🎀', aspect: 'portrait' },
-  { id: 8, src: '/assets/images/photos/photo8.jpg', caption: 'Pure Joy 😄', aspect: 'landscape' },
+  { id: 1, src: 'assets/images/photos/photo5.jpg', caption: 'Beautiful Smile ✨', aspect: 'portrait' },
+  { id: 2, src: 'assets/images/photos/photo2.jpg', caption: 'Lovely Memories 💝', aspect: 'landscape' },
+  { id: 3, src: 'assets/images/photos/photo3.jpg', caption: 'Special Moments 🌸', aspect: 'portrait' },
+  { id: 4, src: 'assets/images/photos/photo7.jpg', caption: 'Adventure Buddies 🌄', aspect: 'square' },
+  { id: 5, src: 'assets/images/photos/photo1.jpg', caption: 'Golden Hours 🌅', aspect: 'landscape' },
+  { id: 6, src: 'assets/images/photos/photo6.jpg', caption: 'Best Friends Forever 👯', aspect: 'square' },
+  { id: 7, src: 'assets/images/photos/photo4.jpg', caption: 'Happy Times 🎀', aspect: 'portrait' },
+  { id: 8, src: 'assets/images/photos/photo8.jpg', caption: 'Pure Joy 😄', aspect: 'landscape' },
 ];
 
 export default function PhotoGallery() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Updated floating elements with side clusters
   const floatingElements = Array.from({ length: 60 }).map((_, i) => {
-    const sideCluster = Math.random() > 0.3; // 70% in side clusters
-    const isLeft = Math.random() > 0.5; // Which side to cluster on
-    
+    const sideCluster = Math.random() > 0.3;
+    const isLeft = Math.random() > 0.5;
+
     return {
       id: i,
       x: sideCluster 
         ? isLeft 
-          ? Math.random() * 20 // Left cluster (0-20%)
-          : 80 + Math.random() * 20 // Right cluster (80-100%)
-        : 20 + Math.random() * 60, // Center area (20-80%)
-      y: Math.random() * 150 - 25, // Vertical position (-25% to 125%)
-      size: Math.random() * 30 + 10, // Smaller elements
+          ? Math.random() * 20 
+          : 80 + Math.random() * 20 
+        : 20 + Math.random() * 60,
+      y: Math.random() * 150 - 25,
+      size: Math.random() * 30 + 10,
       delay: Math.random() * 2,
-      duration: Math.random() * 10 + 5, // More varied duration
-      yMovement: Math.random() * 80 + 40, // Reduced vertical movement
+      duration: Math.random() * 10 + 5,
+      yMovement: Math.random() * 80 + 40,
       rotation: Math.random() * 360,
       emoji: ['🌸', '✨', '💖', '🎀'][i % 4]
     };
@@ -54,7 +53,6 @@ export default function PhotoGallery() {
 
   return (
     <section className="relative py-16 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-blue-50 overflow-hidden">
-      {/* Enhanced background animation with side clusters */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {floatingElements.map((element) => (
           <MotionDiv
@@ -68,7 +66,7 @@ export default function PhotoGallery() {
             initial={{ y: 0, opacity: 0.4 }}
             animate={{ 
               y: [`${element.y}%`, `${element.y - element.yMovement}%`],
-              opacity: [0.4, 0.8, 0.4], // Stronger opacity pulse
+              opacity: [0.4, 0.8, 0.4],
               rotate: [element.rotation, element.rotation + 360]
             }}
             transition={{
@@ -76,7 +74,7 @@ export default function PhotoGallery() {
               delay: element.delay,
               repeat: Infinity,
               ease: "easeInOut",
-              opacity: { duration: element.duration * 0.8 } // Faster opacity transition
+              opacity: { duration: element.duration * 0.8 }
             }}
           >
             {element.emoji}
@@ -88,7 +86,6 @@ export default function PhotoGallery() {
         Magical Memories ✨
       </h2>
 
-      {/* Consistent grid layout */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto px-4">
         {photos.map((photo, index) => (
           <MotionDiv
