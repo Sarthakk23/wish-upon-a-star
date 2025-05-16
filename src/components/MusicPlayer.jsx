@@ -5,9 +5,9 @@ const MotionDiv = motion.div;
 const MotionButton = motion.button;
 
 const songs = [
-  { id: 1, title: "Happy Birthday", emoji: "🎂", src: "/assets/audio/happy-birthday.mp3" },
-  { id: 2, title: "Princess Theme", emoji: "👑", src: "/assets/audio/princess-theme.mp3" },
-  { id: 3, title: "Celebration", emoji: "🎉", src: "/assets/audio/celebration.mp3" }
+  { id: 1, title: "Happy Birthday", emoji: "🎂", src: "assets/audio/happy-birthday.mp3" },
+  { id: 2, title: "Princess Theme", emoji: "👑", src: "assets/audio/princess-theme.mp3" },
+  { id: 3, title: "Celebration", emoji: "🎉", src: "assets/audio/celebration.mp3" }
 ];
 
 export default function FloatingMusicPlayer() {

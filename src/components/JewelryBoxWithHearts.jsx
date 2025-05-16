@@ -6,10 +6,10 @@ const MotionButton = motion.button;
 
 // Replace the emojis with actual image paths (update src fields to your real photo URLs)
 const jewelryItems = [
-  { id: 1, name: 'Diamond Necklace', src: '/assets/images/gift/necklace.png', color: 'text-blue-300' },
-  { id: 2, name: 'Pearl Earrings', src: '/assets/images/gift/earring.png', color: 'text-gray-200' },
-  { id: 3, name: 'Ruby Ring', src: '/assets/images/gift/ring.png', color: 'text-red-400' },
-  { id: 4, name: 'Gold Bracelet', src: '/assets/images/gift/bracelet.png', color: 'text-yellow-400' },
+  { id: 1, name: 'Diamond Necklace', src: 'assets/images/gift/necklace.png', color: 'text-blue-300' },
+  { id: 2, name: 'Pearl Earrings', src: 'assets/images/gift/earring.png', color: 'text-gray-200' },
+  { id: 3, name: 'Ruby Ring', src: 'assets/images/gift/ring.png', color: 'text-red-400' },
+  { id: 4, name: 'Gold Bracelet', src: 'assets/images/gift/bracelet.png', color: 'text-yellow-400' },
 ];
 
 const heartEmojis = ['💖', '💗', '💓', '💘', '💝', '💞', '✨', '🌸', '🎀'];

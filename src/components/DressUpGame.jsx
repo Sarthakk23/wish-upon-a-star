@@ -7,14 +7,14 @@ const MotionImg = motion.img;
 
 const dressItems = {
   dresses: [
-    { id: 1, name: "Pink Gown", emoji: "👗", color: "bg-pink-400", image: "/assets/images/dresses/pink-gown.png" },
-    { id: 2, name: "Blue Dress", emoji: "👘", color: "bg-blue-400", image: "/assets/images/dresses/blue-dress.png" },
-    { id: 3, name: "Princess", emoji: "👑", color: "bg-purple-400", image: "/assets/images/dresses/princess.png" },
+    { id: 1, name: "Pink Gown", emoji: "👗", color: "bg-pink-400", image: "assets/images/dresses/pink-gown.png" },
+    { id: 2, name: "Blue Dress", emoji: "👘", color: "bg-blue-400", image: "assets/images/dresses/blue-dress.png" },
+    { id: 3, name: "Princess", emoji: "👑", color: "bg-purple-400", image: "assets/images/dresses/princess.png" },
   ],
   accessories: [
-    { id: 1, name: "Tiara", emoji: "👑", image: "/assets/images/accessories/tiara.png" },
-    { id: 2, name: "Necklace", emoji: "📿", image: "/assets/images/accessories/necklace.png" },
-    { id: 3, name: "Earrings", emoji: "💎", image: "/assets/images/accessories/earrings.png" },
+    { id: 1, name: "Tiara", emoji: "👑", image: "assets/images/accessories/tiara.png" },
+    { id: 2, name: "Necklace", emoji: "📿", image: "assets/images/accessories/necklace.png" },
+    { id: 3, name: "Earrings", emoji: "💎", image: "assets/images/accessories/earrings.png" },
   ]
 };
 
